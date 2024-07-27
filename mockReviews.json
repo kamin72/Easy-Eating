@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Tasty Treats",
+    "cuisine": "American",
+    "address": "123 Main St, Foodville, FC 12345",
+    "rating": 4.3,
+    "priceRange": "$$",
+    "image": "/images/food_1.jpg",
+    "openingHours": "11:00 AM - 10:00 PM"
+  },
+  {
+    "id": 2,
+    "name": "Sushi Heaven",
+    "cuisine": "Japanese",
+    "address": "456 Oak Ave, Sushitown, ST 67890",
+    "rating": 4.8,
+    "priceRange": "$$$",
+    "image": "/images/food_2.jpg",
+    "openingHours": "12:00 PM - 11:00 PM"
+  },
+  {
+    "id": 3,
+    "name": "Pasta Paradise",
+    "cuisine": "Italian",
+    "address": "789 Elm Rd, Pastacity, PC 13579",
+    "rating": 4.5,
+    "priceRange": "$$",
+    "image": "/images/food_3.jpg",
+    "openingHours": "11:30 AM - 10:30 PM"
+  },
+  {
+    "id": 4,
+    "name": "Spice Route",
+    "cuisine": "Indian",
+    "address": "321 Spice St, Curryville, CV 24680",
+    "rating": 4.6,
+    "priceRange": "$$",
+    "image": "/images/food_4.jpg",
+    "openingHours": "12:00 PM - 10:00 PM"
+  },
+  {
+    "id": 5,
+    "name": "Green Leaf Café",
+    "cuisine": "Vegan",
+    "address": "567 Vegan Way, Greentown, GT 97531",
+    "rating": 4.2,
+    "priceRange": "$$",
+    "image": "/images/food_5.jpg",
+    "openingHours": "8:00 AM - 9:00 PM"
+  },
+  {
+    "id": 6,
+    "name": "Taco Fiesta",
+    "cuisine": "Mexican",
+    "address": "890 Salsa Blvd, Tacobay, TB 35791",
+    "rating": 4.4,
+    "priceRange": "$",
+    "image": "/images/food_6.jpg",
+    "openingHours": "10:00 AM - 11:00 PM"
+  },
+  {
+    "id": 7,
+    "name": "Dim Sum Delight",
+    "cuisine": "Chinese",
+    "address": "432 Dragon St, Dumpling City, DC 86420",
+    "rating": 4.7,
+    "priceRange": "$$",
+    "image": "/images/food_7.jpg",
+    "openingHours": "11:00 AM - 10:00 PM"
+  },
+  {
+    "id": 8,
+    "name": "Le Petit Bistro",
+    "cuisine": "French",
+    "address": "765 Eiffel Ave, Parisburgh, PB 54321",
+    "rating": 4.9,
+    "priceRange": "$$$",
+    "image": "/images/food_8.jpg",
+    "openingHours": "5:00 PM - 11:00 PM"
+  },
+  {
+    "id": 9,
+    "name": "Smokey BBQ Shack",
+    "cuisine": "Barbecue",
+    "address": "210 Grill Lane, Smokeville, SV 12345",
+    "rating": 4.5,
+    "priceRange": "$$",
+    "image": "/images/food_9.jpg",
+    "openingHours": "11:30 AM - 9:30 PM"
+  },
+  {
+    "id": 10,
+    "name": "Ocean's Bounty",
+    "cuisine": "Seafood",
+    "address": "876 Coral Reef Rd, Fishport, FP 31415",
+    "rating": 4.6,
+    "priceRange": "$$$",
+    "image": "/images/food_10.jpg",
+    "openingHours": "12:00 PM - 10:00 PM"
+  }
+]
