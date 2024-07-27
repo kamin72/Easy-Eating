@@ -12,7 +12,7 @@ export async function getServerSideProps() {
   };
 }
 
-export default function cards({ products }) {
+export default function Cards({ products }) {
   if (products.length === 0) {
     return <div>No products found</div>;
   } else {

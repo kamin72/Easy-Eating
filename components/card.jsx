@@ -1,8 +1,8 @@
 import Image from "next/image";
 import reviews from "../mockReviews.json";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function cards() {
+export default function Cards() {
   const [restaurant, setRestaurant] = useState(null);
 
   function randomData() {

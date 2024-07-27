@@ -1,4 +1,4 @@
-export default function loginForm() {
+export default function LoginForm() {
   return (
     <>
       <div className="border-2 flex flex-col w-[90%] m-auto py-[20px] px-[10px] sm:w-[50%]">
