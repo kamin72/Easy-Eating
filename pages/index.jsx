@@ -4,6 +4,7 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import LoginForm from "../components/login";
 import Link from "next/link";
+import GoogleLogin from "../components/googleLogin";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <Cards />
+        <GoogleLogin />
       </Layout>
       {/* <Link href="/products">next page</Link> */}
     </>
