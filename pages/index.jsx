@@ -5,10 +5,12 @@ import Nav from "../components/nav";
 import LoginForm from "../components/login";
 import Link from "next/link";
 import GoogleLogin from "../components/googleLogin";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <>
+      <Script src="https://accounts.google.com/gsi/client" async></Script>
       <Nav />
       <Layout>
         <LoginForm />
