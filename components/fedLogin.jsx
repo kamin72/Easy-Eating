@@ -1,44 +1,49 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const FedCMLogin = () => {
+export default function FedCMLogin() {
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    if (typeof window !== "undefined" && "FederatedCredential" in window) {
+    if ("FederatedCredential" in window) {
       const identity = {
-        identity: {
-          context: "signup",
-          providers: [
-            {
-              configURL:
-                "https://accounts.google.com/.well-known/openid-configuration'",
-              clientId:
-                "133688964144-uu4s377mpv9ctra1eo73v61th5336ng1.apps.googleusercontent.com",
-              nonce: "******",
-            },
-          ],
-        },
+        providers: [
+          {
+            configURL:
+              "https://accounts.google.com/.well-known/openid-configuration",
+            clientId:
+              "133688964144-uu4s377mpv9ctra1eo73v61th5336ng1.apps.googleusercontent.com",
+          },
+        ],
       };
 
-      const abortController = new AbortController();
-      const signal = abortController.signal;
+      const options = {
+        identity,
+        mediation: "optional", // 或 'required'
+        signal: AbortSignal.timeout(10000), // 10 秒超時
+      };
 
       navigator.credentials
-        .get({ identity, signal })
+        .get(options)
         .then((cred) => {
           console.log("FedCM success:", cred);
           // 處理憑證
         })
         .catch((error) => {
           console.error("FedCM error:", error);
-          // 錯誤處理
+          setError(error.message);
+          if (error.name === "IdentityCredentialError") {
+            console.log(
+              "Error retrieving token. Falling back to traditional sign-in."
+            );
+            // 實現傳統的 Google 登錄按鈕作為備選
+          }
         });
-
-      return () => {
-        abortController.abort();
-      };
     }
   }, []);
 
-  return null; // 或者返回一個後備UI
-};
+  if (error) {
+    return <div>Error: {error}. Please try traditional sign-in.</div>;
+  }
 
-export default FedCMLogin;
+  return null; // 或返回一個按鈕觸發登錄
+}

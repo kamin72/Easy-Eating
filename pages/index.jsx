@@ -33,7 +33,6 @@ export default function Home() {
         <Nav />
         <Layout>
           <LoginForm />
-          <FedCMLogin></FedCMLogin>
         </Layout>
       </>
     );
