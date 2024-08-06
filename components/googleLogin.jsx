@@ -1,4 +1,17 @@
+import { useEffect } from "react";
+
 export default function GoogleLogin() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://accounts.google.com/gsi/client";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <>
       <div
@@ -7,7 +20,6 @@ export default function GoogleLogin() {
         data-context="signin"
         data-login_uri="https://easy-eating-three.vercel.app"
         data-nonce=""
-        data-auto_select="true"
         data-itp_support="true"></div>
     </>
   );
