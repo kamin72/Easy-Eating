@@ -4,14 +4,17 @@ const FedCMLogin = () => {
   useEffect(() => {
     if (typeof window !== "undefined" && "FederatedCredential" in window) {
       const identity = {
-        providers: [
-          {
-            configURL:
-              "https://accounts.google.com/.well-known/openid-configuration",
-            clientId:
-              "133688964144-uu4s377mpv9ctra1eo73v61th5336ng1.apps.googleusercontent.com",
-          },
-        ],
+        identity: {
+          context: "signup",
+          providers: [
+            {
+              configURL: "https://accounts.idp.example/config.json",
+              clientId:
+                "133688964144-uu4s377mpv9ctra1eo73v61th5336ng1.apps.googleusercontent.com",
+              nonce: "******",
+            },
+          ],
+        },
       };
 
       const abortController = new AbortController();
