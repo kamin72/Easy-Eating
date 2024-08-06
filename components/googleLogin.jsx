@@ -20,7 +20,8 @@ export default function GoogleLogin() {
         data-context="signin"
         data-login_uri="https://easy-eating-kamin72s-projects.vercel.app/"
         data-nonce=""
-        data-itp_support="true"></div>
+        data-itp_support="true"
+        data-use_fedcm_for_prompt="true"></div>
     </>
   );
 }
