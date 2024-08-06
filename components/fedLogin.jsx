@@ -8,7 +8,8 @@ const FedCMLogin = () => {
           {
             configURL:
               "https://accounts.google.com/.well-known/openid-configuration",
-            clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+            clientId:
+              "133688964144-uu4s377mpv9ctra1eo73v61th5336ng1.apps.googleusercontent.com",
           },
         ],
       };
