@@ -1,31 +1,6 @@
 import { useEffect } from "react";
 
 export default function GoogleLogin() {
-  if ("FederatedCredential" in window) {
-    const identity = {
-      providers: [
-        {
-          configURL:
-            "https://accounts.google.com/.well-known/openid-configuration",
-          clientId: "YOUR_CLIENT_ID",
-        },
-      ],
-    };
-
-    navigator.credentials
-      .get({ identity })
-      .then((cred) => {
-        // 處理憑證
-        console.log(cred);
-      })
-      .catch((error) => {
-        console.error("FedCM error:", error);
-        // 在這裡處理錯誤，可能需要回退到其他登錄方法
-      });
-  } else {
-    console.log("FedCM not supported");
-    // 使用替代的登錄方法
-  }
   return (
     <>
       <div

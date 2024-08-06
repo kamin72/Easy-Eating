@@ -6,6 +6,7 @@ import LoginForm from "../components/login";
 import Link from "next/link";
 import Script from "next/script";
 import { useState, useEffect } from "react";
+import FedCMLogin from "../components/fedLogin";
 
 export default function Home() {
   const [memberData, setMemberData] = useState(null);
@@ -32,6 +33,7 @@ export default function Home() {
         <Nav />
         <Layout>
           <LoginForm />
+          <FedCMLogin></FedCMLogin>
         </Layout>
       </>
     );
