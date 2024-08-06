@@ -8,7 +8,8 @@ const FedCMLogin = () => {
           context: "signup",
           providers: [
             {
-              configURL: "https://accounts.idp.example/config.json",
+              configURL:
+                "https://accounts.google.com/.well-known/openid-configuration'",
               clientId:
                 "133688964144-uu4s377mpv9ctra1eo73v61th5336ng1.apps.googleusercontent.com",
               nonce: "******",
