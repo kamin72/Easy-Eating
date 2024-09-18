@@ -17,7 +17,7 @@ export default function Main() {
       <Layout>
         <Cards />
       </Layout>
-      {/* <Link href="/products">next page</Link> */}
+      <Link href="/products">next page</Link>
     </>
   );
 }

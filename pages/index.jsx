@@ -5,8 +5,8 @@ import Nav from "../components/nav";
 import LoginForm from "../components/login";
 import Link from "next/link";
 import Script from "next/script";
+import MainPage from "./mainPage";
 import { useState, useEffect } from "react";
-import FedCMLogin from "../components/fedLogin";
 
 export default function Home() {
   const [memberData, setMemberData] = useState(null);
@@ -39,17 +39,7 @@ export default function Home() {
   } else {
     return (
       <>
-        <Head>
-          <title>Easy Eating</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"></meta>
-        </Head>
-        <Nav />
-        <Layout>
-          <Cards />
-        </Layout>
-        {/* <Link href="/products">next page</Link> */}
+        <MainPage />
       </>
     );
   }
