@@ -16,8 +16,27 @@ export default function AddForm() {
 
     if (response.status == 200) {
       alert("Pet added successfully!");
+      setPetName("");
+      setOwnerName("");
     } else {
       alert("Error adding pet");
+    }
+  };
+
+  const handleDelete = async () => {
+    const response = await fetch("/api/deleteData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ownerName }),
+    });
+
+    if (response.status == 200) {
+      alert("data has been deleted successfully!");
+      setOwnerName("");
+    } else {
+      alert("Delete Error");
     }
   };
 
@@ -47,6 +66,12 @@ export default function AddForm() {
           />
           <button type="submit" className="bg-amber-300">
             Submit
+          </button>
+          <button
+            type="button"
+            onClick={handleDelete}
+            className="bg-amber-900 mx-[10px]">
+            Delete
           </button>
         </div>
       </form>
